@@ -1,14 +1,18 @@
 <html>
 	<head>
-		<title> Da Blog!</title>
+		<title> Da Blog again!</title>
 	</head>
 	<body>
 		<div>
-			<h1><a href="">Da Blog</a></h1>
+			<h1><a href="">More of Da Blog</a></h1>
 		</div>
 
+		{% for post in posts %}
 		<div>
-			<p>Stuff here </p>
+			<p> Published: {{post.published_date}}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p> {{ post.text|linebreaks }} </p>
 		</div>
+		{% endfor %}
 	</body>
 </html>
